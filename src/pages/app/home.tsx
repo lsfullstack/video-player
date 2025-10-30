@@ -12,7 +12,10 @@ export function Home() {
   })()
 
   return (
-    <div className="flex flex-col w-full p-12 bg-slate-900 items-center gap-12">
+    <div className="flex flex-col h-full min-h-screen w-full p-12 bg-slate-900 items-center gap-12">
+      {links.length === 0 && (
+        <p className="text-center text-xl">Nenhum vídeo encontrado.</p>
+      )}
       {links.map(
         (
           link: { title: string; url: string; order: number },
